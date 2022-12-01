@@ -12,6 +12,7 @@ export class ViewCourseComponent {
   {
     api.fetchCourses().subscribe(
       (response)=> {
+        this.loading=false
         this.course = response;
 
       }
@@ -20,5 +21,7 @@ export class ViewCourseComponent {
 
 
   course:any 
+
+  loading : boolean =true
 
 }
